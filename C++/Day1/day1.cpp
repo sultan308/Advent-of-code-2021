@@ -6,7 +6,7 @@
 /*
  * iterates over the input
  * keeps the previous value
- * if the current index value is less than the previous index value it adds one to the counter
+ * if the current index value is more than the previous index value it adds one to the counter
  * returns counter
 */
 int part1(std::vector<int> sonar)
@@ -30,7 +30,7 @@ int part1(std::vector<int> sonar)
  * iterates over the input while the current index has two next elements
  * for each index adds the value and the next two index ie (index+1 & index+2) values up
  * keeps the previous value
- * if the current index total is less than the total it adds one to the counter
+ * if the current index total is more than the previous total it adds one to the counter
  * returns counter
 */
 int part2(std::vector<int> sonar)
