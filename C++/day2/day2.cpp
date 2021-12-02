@@ -4,24 +4,27 @@
 #include <algorithm>
 
 
+
+
+
 int part1(std::vector<std::pair<std::string,int>> instructions)
 {
     int height, depth;
     height = 0;
     depth = 0;
-    for( std::pair<std::string,int> inst : instructions)
+    for( std::pair<std::string,int> instruction : instructions)
     {
-        if(inst.first == "down")
+        if(instruction.first == "down")
         {
-            depth+=inst.second;
+            depth+=instruction.second;
         }
-        else if(inst.first == "up")
+        else if(instruction.first == "up")
         {
-            depth-=inst.second;
+            depth-=instruction.second;
         }
-        else if(inst.first == "forward")
+        else if(instruction.first == "forward")
         {
-            height+=inst.second;
+            height+=instruction.second;
         }
     }
     return height * depth;
