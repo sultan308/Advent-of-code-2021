@@ -1,3 +1,4 @@
+import os
 
 def find_increaseing(sonar_report , window_size):
     """
@@ -42,7 +43,11 @@ def find_increaseing(sonar_report , window_size):
 
 def main():
     sonar_report = []
-    with open('input.txt', encoding='utf8') as f:
+    
+    dirname = os.path.dirname(__file__)
+    filename = os.path.join(dirname, 'input.txt')
+    
+    with open(filename, encoding='utf8') as f:
         for line in f:
             sonar_report.append(int(line.strip()))
            
