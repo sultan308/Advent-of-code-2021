@@ -5,23 +5,6 @@
 #include <sstream>
 
 
-
-std::vector<int> splitBy(std::string st)
-{
-    std::vector<int> splited ;
-    std::stringstream ss(st);
-
-    for (int num; ss >> num;) {
-
-        splited.push_back(num);
-        if (ss.peek() == '.')
-            ss.ignore();
-        if (ss.peek() == '.')
-            ss.ignore();
-    }
-    return splited;
-
-}
 bool isValid(int x,int y,std::pair<int,int> x_bounds,std::pair<int,int> y_bounds)
 {
     std::pair<int,int> current = {x,y};
