@@ -14,12 +14,12 @@ std::map<std::pair<int,int>,int> findShortestPaths(std::map<std::pair<int,int>,s
 {
     std::map<std::pair<int,int>,int> dist;
 
-    std::map<std::pair<int,int>,bool> visted;
+   
 
     for(auto p : adjacency_matrix)
     {
         dist[p.first] = INT_MAX;
-        visted[p.first] = false;
+     
 
 
     }
@@ -32,7 +32,7 @@ std::map<std::pair<int,int>,int> findShortestPaths(std::map<std::pair<int,int>,s
     while(pq.size() != 0)
     {
         std::pair<int,int> key = pq.top().second;
-        visted[key] = true;
+        
         pq.pop();
 
         for(std::pair<std::pair<int,int>,int> adj : adjacency_matrix[key])
